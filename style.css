@@ -1,0 +1,96 @@
+¨{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF2C2;
+    color: #626F47;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "contenido contenido sidebar"
+    "bloque1 bloque2 bloque3"
+    "footer footer footer";
+}
+
+.contenido {
+    background-color:#FFF2C2;
+    padding: 20px;
+    text-align: justify;
+}
+
+nav {
+    background-color: #A4B465;
+    color: #A89C29;
+    grid-area: navbar;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+nav a {
+    color:#A89C29;
+    text-decoration: none;
+    margin: 0 30px;
+}
+
+.contenido {
+    grid-area: contenido;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color:#626F47;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.bloque {
+    color:#A89C29;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#bloque1 {
+    grid-area: bloque1;
+    color:#A4B465;
+}
+
+#bloque2 {
+    grid-area: bloque2;
+    color: #A4B465;
+}
+
+#bloque3 {
+    grid-area: bloque3;
+    color: #A4B465;
+}
+
+footer {
+    background-color: #A4B465;
+    color: #FFF2C2;
+    grid-area: footer;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
